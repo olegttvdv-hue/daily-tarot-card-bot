@@ -63,3 +63,4 @@
 - 2026-09-06: Verify duplicate synthetic subscriber identifiers fail fixture validation before scheduling so one logical recipient cannot produce ambiguous delivery history, retries, or summary counts.
 - 2026-09-06: Verify a synthetic subscriber timezone change between selection and delivery is re-evaluated against the current local date before sending, preventing a stale selection from producing a duplicate daily delivery.
 - 2026-09-06: Verify a synthetic permanent delivery failure is marked non-retryable for that attempt path and cannot create repeated scheduler retries or a false success-history record.
+- 2026-09-06: Verify a retry after the documented text-only fallback preserves the same logical card and delivery identity instead of reattempting image selection and creating a second delivery path.
