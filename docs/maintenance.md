@@ -61,3 +61,4 @@
 - 2026-09-05: Verify duplicate card identifiers in the synthetic dataset fail validation before selection or delivery so one logical card ID cannot resolve to ambiguous content.
 - 2026-09-05: Verify a synthetic card with a blank required text field fails dataset validation before selection or delivery, with zero attempts, retries, or success-history writes.
 - 2026-09-06: Verify duplicate synthetic subscriber identifiers fail fixture validation before scheduling so one logical recipient cannot produce ambiguous delivery history, retries, or summary counts.
+- 2026-09-06: Verify a synthetic subscriber timezone change between selection and delivery is re-evaluated against the current local date before sending, preventing a stale selection from producing a duplicate daily delivery.
