@@ -64,3 +64,4 @@
 - 2026-09-06: Verify a synthetic subscriber timezone change between selection and delivery is re-evaluated against the current local date before sending, preventing a stale selection from producing a duplicate daily delivery.
 - 2026-09-06: Verify a synthetic permanent delivery failure is marked non-retryable for that attempt path and cannot create repeated scheduler retries or a false success-history record.
 - 2026-09-06: Verify a retry after the documented text-only fallback preserves the same logical card and delivery identity instead of reattempting image selection and creating a second delivery path.
+- 2026-09-07: Verify a synthetic recipient with an existing success record for the local date remains skipped after the card dataset changes, preventing a new selection from replaying an already completed daily delivery.
