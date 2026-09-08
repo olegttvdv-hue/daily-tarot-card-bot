@@ -66,3 +66,4 @@
 - 2026-09-06: Verify a retry after the documented text-only fallback preserves the same logical card and delivery identity instead of reattempting image selection and creating a second delivery path.
 - 2026-09-07: Verify a synthetic recipient with an existing success record for the local date remains skipped after the card dataset changes, preventing a new selection from replaying an already completed daily delivery.
 - 2026-09-08: Verify two workers claiming the same synthetic recipient/date delivery concurrently resolve to one persisted claim before sending, preventing duplicate attempts even under scheduler overlap.
+- 2026-09-08: Verify an expired synthetic delivery claim can be safely reclaimed after a worker crash without creating a second success record or changing the original recipient/date/card identity.
