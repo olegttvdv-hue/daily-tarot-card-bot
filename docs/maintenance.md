@@ -67,3 +67,4 @@
 - 2026-09-07: Verify a synthetic recipient with an existing success record for the local date remains skipped after the card dataset changes, preventing a new selection from replaying an already completed daily delivery.
 - 2026-09-08: Verify two workers claiming the same synthetic recipient/date delivery concurrently resolve to one persisted claim before sending, preventing duplicate attempts even under scheduler overlap.
 - 2026-09-08: Verify an expired synthetic delivery claim can be safely reclaimed after a worker crash without creating a second success record or changing the original recipient/date/card identity.
+- 2026-09-09: Verify a worker crash after the delivery channel accepts a synthetic send but before local success persistence is reconciled conservatively, preventing an automatic blind resend from creating a duplicate daily card.
